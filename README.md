@@ -63,37 +63,58 @@ npm install
 cd leaderboard-api
 ```
 
-1. Configure your database in the `.env` file, then run migrations:
+1. Copy the environment file and configure it:
+
+```bash
+cp .env.example .env
+```
+
+2. Generate the application key:
+
+```bash
+php artisan key:generate
+```
+
+3. Configure your database in the `.env` file, then run migrations:
+
+# Database Configuration
+
+DB_CONNECTION=pgsql
+DB_HOST=127.0.0.1
+DB_PORT=5432
+DB_DATABASE=your_database_name
+DB_USERNAME=your_username
+DB_PASSWORD=your_password
 
 ```bash
 php artisan migrate
 ```
 
-2. Seed the database:
+4. Seed the database:
 
 ```bash
 php artisan db:seed
 ```
 
-3. Start the Laravel development server:
+5. Start the Laravel development server:
 
 ```bash
 php artisan serve
 ```
 
-4. Run the unit tests:
+6. Run the unit tests:
 
 ```bash
 php artisan test
 ```
 
-6. Check the scheduled jobs:
+7. Check the scheduled jobs:
 
 ```bash
 php artisan schedule:list
 ```
 
-5. Check the available routes:
+8. Check the available routes:
 
 ```bash
 php artisan route:list
