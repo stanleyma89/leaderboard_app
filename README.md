@@ -77,7 +77,7 @@ php artisan key:generate
 
 4. Configure your database in the `.env` file, then run migrations:
 
-# Database Configuration
+##### Database Configuration
 
 ```env
 DB_CONNECTION=pgsql
